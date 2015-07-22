@@ -55,6 +55,7 @@ _TAB_SIZE_ = 4
 indent :: [String] -> [String]
 indent = map ((replicate _TAB_SIZE_ ' ') ++)
 
+-- | Convert markdown sections to package descriptions
 escape :: [String] -> [String]
 escape = map go
     where
@@ -68,6 +69,7 @@ escape = map go
       go' '#' = "&#35;"
       go' s = [s]
 
+-- | Extract source code examples from Markdown files
 toHaskell :: [String] -> [String]
 toHaskell ls = go False ls
     where
