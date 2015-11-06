@@ -35,11 +35,11 @@ gitHubProject packageUrl =
            ++ descriptionSection
            ++ [ "source-repository head"
            , "    type: git"
-           , "    location: " ++ packageUrl ++ " --recursive"
+           , "    location: " ++ packageUrl
            , "source-repository this"
            , "    type: git"
            , "    tag: " ++ gitTag
-           , "    location: " ++ packageUrl ++ " --recursive"
+           , "    location: " ++ packageUrl
            ]
 
 getGitTag =
